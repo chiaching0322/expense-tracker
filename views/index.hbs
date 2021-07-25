@@ -1,1 +1,43 @@
-<h1>This is a express app!!</h1>
+<div class="container">
+  <div class="row form-group">
+    <form action="/filter" method="POST">
+      <select name="category" class=form-control"">
+        <option>Select</option>
+        <option value="">家居物業</option>
+        <option value="">交通出行</option>
+        <option value="">休閒娛樂</option>
+        <option value="">餐飲食品</option>
+        <option value="">其他</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <p>總金額</p>
+    </div>
+    <div class="col-8">
+      <p>123456 </p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-item d-flex">
+        <i class="fas fa-home"></i>
+        <div class="name">租金</div>
+        <div class="date">(2021/07/25)</div>
+        <div class="expense">8000</div>
+        <a href="/edit">修改</a>
+        <form action="/delete" method="post">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <a href="/new">新增支出</a>
+  </div>
+</div>
