@@ -10,8 +10,8 @@ const recordSchema = new Schema({
     require: true,
   },
   category: {
-    type: Schema.Types.ObjectId,
-    red: 'Category',
+    type: String,
+    require: true,
   },
   amount: {
     type: Number,
