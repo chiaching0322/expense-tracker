@@ -24,16 +24,18 @@
 
   <div class="row">
     <ul class="list-group">
+      {{#each records}}
       <li class="list-item d-flex">
         <i class="fas fa-home"></i>
-        <div class="name">租金</div>
-        <div class="date">(2021/07/25)</div>
-        <div class="expense">8000</div>
+        <div class="name">{{this.name}}</div>
+        <div class="date">{{this.date}}</div>
+        <div class="expense">{{this.amount}}</div>
         <a href="/edit">修改</a>
         <form action="/delete" method="post">
           <button type="submit">Delete</button>
         </form>
       </li>
+      {{/each}}
     </ul>
   </div>
 
