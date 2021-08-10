@@ -13,4 +13,17 @@ router.get('/', async (req, res) => {
   res.render('index', { totalAmount, records, categoryList })
 })
 
+router.get('/filter', async (req, res) => {
+  const categoryList = await Category.find().sort({ _id: 'asc' }).lean()
+  const { categorySelector } = req.query
+  const records = await Record.find({ category: categorySelector })
+    .lean()
+    .sort({ _id: 'desc' })
+  let totalAmount = 0
+  for (let record of records) {
+    totalAmount += record.amount
+  }
+  res.render('index', { totalAmount, records, categoryList, categorySelector })
+})
+
 module.exports = router

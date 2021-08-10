@@ -1,8 +1,8 @@
 <div class="container">
   <div name="filter-form" class="col-auto mr-auto">
-    <form action="/filter" method="POST">
+    <form action="/filter" method="GET">
       <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width: 80%"
-        onchange="submit()" name="category">
+        onchange="submit()" name="categorySelector">
 
         <option>Select</option>
         {{#each categoryList}}
